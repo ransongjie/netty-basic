@@ -1,0 +1,10 @@
+# BIO
+- ServerSocket
+- Socket
+# NIO
+- Selector
+- Channel
+- Buffer
+- SelectionKey
+# 参考
+- 尚硅谷netty视频教程及代码
