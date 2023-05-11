@@ -21,11 +21,11 @@ public class BIOServer{
         ExecutorService es=Executors.newCachedThreadPool();
 
         //1. 建立ServerSocket
-        ServerSocket serverSocket=new ServerSocket(6666);
+        ServerSocket serverSocket=new ServerSocket(7000);
         System.out.println("服务器启动....");
 
         while(true){
-            System.out.println("线程信息 id="+Thread.currentThread().getId()+" 名词="+Thread.currentThread().getName());
+            System.out.println("线程信息 id="+Thread.currentThread().getId()+" 名字="+Thread.currentThread().getName());
             System.out.println("等待连接....");
             //2. 监听，阻塞当前线程，直到获取到连接
             final Socket socket=serverSocket.accept();//accept

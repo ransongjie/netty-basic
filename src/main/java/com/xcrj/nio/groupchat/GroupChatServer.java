@@ -10,7 +10,7 @@ import java.util.Set;
 
 public class GroupChatServer {
     private ServerSocketChannel serverSocketChannel;
-    private static  final int PORT=6667;
+    private static  final int PORT=7000;
     private Selector selector;
 
     public GroupChatServer(){

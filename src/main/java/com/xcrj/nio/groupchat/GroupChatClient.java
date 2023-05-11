@@ -14,7 +14,7 @@ public class GroupChatClient {
     private final SocketChannel socketChannel;
     private final Selector selector;
     private static final String HOST="localhost";
-    private static final int PORT=6667;
+    private static final int PORT=7000;
     private final String username;
 
     public GroupChatClient() throws IOException {

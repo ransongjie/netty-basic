@@ -8,7 +8,7 @@ public class NIOClient {
     public static void main(String[] args) throws Exception{
         SocketChannel socketChannel=SocketChannel.open();
         socketChannel.configureBlocking(false);
-        InetSocketAddress inetSocketAddress = new InetSocketAddress("localhost", 6666);
+        InetSocketAddress inetSocketAddress = new InetSocketAddress("localhost", 7000);
         //非阻塞连接
         if(!socketChannel.connect(inetSocketAddress)){
             while(!socketChannel.finishConnect()){

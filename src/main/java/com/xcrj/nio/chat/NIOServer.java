@@ -26,7 +26,7 @@ public class NIOServer {
         //1. ServerSocketChannel
         ServerSocketChannel serverSocketChannel=ServerSocketChannel.open();
         serverSocketChannel.configureBlocking(false);//设置为非阻塞
-        InetSocketAddress inetSocketAddress=new InetSocketAddress(6666);
+        InetSocketAddress inetSocketAddress=new InetSocketAddress(7000);
         ServerSocket serverSocket=serverSocketChannel.socket();
         serverSocket.bind(inetSocketAddress);
         //2. Selector
