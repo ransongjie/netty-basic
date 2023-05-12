@@ -133,5 +133,29 @@ pipeline是双向链表
 出站：出pipeline，pipeline>>channel
 入站：入pipeline，channel>>pipeline
 ```
+# Netty 自定义RPC
+RPC一般流程
+![RPC一般流程](img/rpc一般流程.png)
+
+rpc包代码流程
+```
+1. 启动Server(Provider)对外提供服务
+- 等待Client(Customer)连接
+- 解码/编码
+- 校验Protocol
+- 本地调用xxxServiceImpl
+- 响应调用结果
+2. 启动Client(Customer)远程调用服务
+- !!!创建xxxServiceProxy
+- 创建InvocationHandler
+  -- 启动Client
+  -- 设置请求数据（远程调用参数）
+  -- !!!另开线程回调
+  --- 发送远程调用参数（协商的Protocol）
+  --- 编码/解码
+  --- 等待Server(Provider)响应结果，wait
+  --- 获得Server(Provider)响应结果，nofity
+  --- 返回远程调用结果
+```
 # 参考
 - 尚硅谷netty视频教程及代码
